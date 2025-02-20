@@ -1,5 +1,7 @@
 # Profanity Filter
 
+Profanity filter is a swear word filter made 100% in PHP! What motivated me to do this project is that I was looking for one for my website, and there was not many so I decided to make my own.
+
 ## Install
 
 ```bash
