@@ -1,6 +1,6 @@
 {
     "name": "itselijahwood/profanity",
-    "description": "A profanity checker in PHP made by itselijahwood, filters bad words in a string.",
+    "description": "A profanity checker, filters swear words in a string.",
     "type": "library",
     "license": "MIT",
     "authors": [
