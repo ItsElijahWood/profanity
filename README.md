@@ -1,6 +1,6 @@
 # 🛡️ Profanity Filter
 
-Profanity filter is a swear word filter made in PHP for PHP! It blocks over 200+ swear words + racial slurs.
+Profanity filter is a swear word filter made in PHP for PHP! It blocks over 200+ swear words + racial slurs. Supports English, Spanish and French. 
 I'm accepting **PR's** but mostly won't be available to accept / review.
 
 ## Install

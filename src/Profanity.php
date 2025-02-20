@@ -15,13 +15,17 @@ class Profanity
    */
   public function filterString($string, array $customSwearWords = []): bool
   {
-    $bad_words = require __DIR__ . '/../config/en.php';
+    $en = require __DIR__ . '/../config/en.php';
+    $fr = require __DIR__ . '/../config/fr.php';
+    $es = require __DIR__ . '/../config/es.php';
+
+    $en = array_merge($en, $fr, $es);
 
     if (!empty($customSwearWords)) {
-      $bad_words = array_merge($bad_words, $customSwearWords);
+      $en = array_merge($en, $customSwearWords);
     }
 
-    $filter_string_class = new \Src\Filter\Filterstring($bad_words);
+    $filter_string_class = new \Src\Filter\Filterstring($en);
     return $filter_string_class->filter_string($string);
   }
 
@@ -35,13 +39,17 @@ class Profanity
    */
   public function censorString($string, array $customSwearWords = []): mixed
   {
-    $bad_words = require __DIR__ . '/../config/en.php';
+    $en = require __DIR__ . '/../config/en.php';
+    $fr = require __DIR__ . '/../config/fr.php';
+    $es = require __DIR__ . '/../config/es.php';
+
+    $en = array_merge($en, $fr, $es);
 
     if (!empty($customSwearWords)) {
-      $bad_words = array_merge($bad_words, $customSwearWords);
+      $en = array_merge($en, $customSwearWords);
     }
 
-    $censor_string_class = new \Src\Filter\Filterstring($bad_words);
+    $censor_string_class = new \Src\Filter\Filterstring($en);
     return $censor_string_class->censor_string($string);
   }
 
@@ -56,14 +64,19 @@ class Profanity
    */
   public function replaceString($string, string $replaceString, array $customSwearWords = [])
   {
-    $bad_words = require __DIR__ . '/../config/en.php';
+    $en = require __DIR__ . '/../config/en.php';
+    $fr = require __DIR__ . '/../config/fr.php';
+    $es = require __DIR__ . '/../config/es.php';
+
+    $en = array_merge($en, $fr, $es);
+
     if (empty($replaceString)) throw new \InvalidArgumentException("Parameter #2 on replaceString() === null");
 
     if (!empty($customSwearWords)) {
-      $bad_words = array_merge($bad_words, $customSwearWords);
+      $en = array_merge($en, $customSwearWords);
     }
 
-    $replace_string_class = new \Src\Filter\Filterstring($bad_words);
+    $replace_string_class = new \Src\Filter\Filterstring($en);
     return $replace_string_class->replace_string($string, $replaceString);
   }
 
@@ -75,6 +88,10 @@ class Profanity
   public function getProfanityList(): bool
   {
     $en = require __DIR__ . '/../config/en.php';
+    $fr = require __DIR__ . '/../config/fr.php';
+    $es = require __DIR__ . '/../config/es.php';
+
+    $en = array_merge($en, $fr, $es);
 
     return print_r($en);
   }

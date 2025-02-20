@@ -1,6 +1,7 @@
 <?php
 return [
   'asshole',
+  'ass',
   'bastard',
   'bitch',
   'bollocks',
@@ -97,6 +98,11 @@ return [
   'muffdiver',
   'peckerhead',
   'penisface',
+  'penis',
+  'dick',
+  'vagina',
+  'tits',
+  'boobs',
   'poonani',
   'poopchute',
   'queef',

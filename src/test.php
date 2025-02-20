@@ -3,11 +3,9 @@ require 'vendor/autoload.php';
 
 use ItsElijahWood\Profanity\Profanity;
 
-$string = "test string";
-$customArray = ["string"];
-$replaceString = "[CENSORED]";
+$string = "cul";
 
 $profanity = new Profanity();
-$getList = $profanity->replaceString($string, $replaceString, $customArray);
+$getList = $profanity->getProfanityList();
 
-echo $getList; // Output: [CENSORED] string
+echo $getList; 
