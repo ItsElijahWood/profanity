@@ -6,8 +6,8 @@ require_once __DIR__ . '/./filter/filter_string.php';
 class Profanity
 {
   /**
-   * Filters a string of bad words returns true or false.
-   * (optional) You can add custom array of bad words in parameter 2.
+   * Filters a string of swear words returns true or false.
+   * (optional) You can add custom array of swear words in parameter 2.
    * 
    * @param string $string
    * @param array $customSwearWords (optional)
