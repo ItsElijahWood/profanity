@@ -3,12 +3,11 @@ require 'vendor/autoload.php';
 
 use ItsElijahWood\Profanity\Profanity;
 
-$string = "test";
-$profanity = new Profanity();
-$filter = $profanity->filterString($string);
+$string = "test string";
+$customArray = ["string"];
+$replaceString = "[CENSORED]";
 
-if ($filter) {
-  echo "Swear word found.";
-} else {
-  echo "No swear word.";
-}
+$profanity = new Profanity();
+$getList = $profanity->replaceString($string, $replaceString, $customArray);
+
+echo $getList; // Output: [CENSORED] string
