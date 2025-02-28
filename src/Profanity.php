@@ -1,4 +1,5 @@
 <?php
+
 namespace ItsElijahWood\Profanity;
 
 require_once __DIR__ . '/./filter/filter_string.php';

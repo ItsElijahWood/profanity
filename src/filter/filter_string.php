@@ -1,4 +1,5 @@
 <?php
+
 namespace Src\Filter;
 
 class Filterstring
@@ -113,20 +114,20 @@ class Filterstring
   {
     if (!$this->is_string($string)) throw new \InvalidArgumentException("Parameter #1 must be a string");
     if (!$this->is_string($replace_string)) throw new \InvalidArgumentException("Parameter #2 must be a string");
-  
+
     $string = trim($string);
     $replace_string = trim($replace_string);
     $string = strtolower($string);
 
     foreach ($this->bad_words as $badword) {
       if (stripos($string, $badword) !== false) {
-          $string = preg_replace(
-              "/\b" . preg_quote($badword, '/') . "\b/i",
-              $replace_string,
-              $string
-          );
+        $string = preg_replace(
+          "/\b" . preg_quote($badword, '/') . "\b/i",
+          $replace_string,
+          $string
+        );
       }
-  }
+    }
 
     return $string;
   }
